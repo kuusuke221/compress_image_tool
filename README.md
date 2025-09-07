@@ -1,5 +1,5 @@
 # compress_image_tool
-A tool to compress images into ZIP files to save space on your PC
+A tool to compress images into archive files to save space on your PC
 
 # Operating environment
 
@@ -9,6 +9,7 @@ Windows 11
 
 ### Target file
 - zip
+- rar
 
 ### Target image
 - jpg
@@ -24,6 +25,10 @@ Install the followings.
 - Pillow
     ```bash
     pip install pillow
+    ```
+- rarfile
+    ```bash
+    pip install rarfile
     ```
 
 # How to use
