@@ -59,7 +59,7 @@ def process_zip(zip_path):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("使い方: python script.py <対象フォルダ>")
+        print("使い方: python compress_image_tool.py <対象フォルダ>")
     else:
         zip_files = []
         for dir_path, _, file_names in os.walk(sys.argv[1]):
@@ -72,6 +72,7 @@ if __name__ == "__main__":
         total = len(zip_files)
         print(f"\n=== 開始 ==================== 進捗: 0%")
         for idx, zip_path in enumerate(zip_files):
+            print(f"{zip_path}")
             process_zip(zip_path)
             percent = int((idx+1) / total * 100)
             print(f"=== ZIPファイル({idx+1}/{total}) 完了 === 進捗: {percent}%")
